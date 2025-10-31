@@ -1,0 +1,14 @@
+# Compile the CUDA program
+build:
+    nvcc main.cu solution.cu -o softmax_test
+
+# Build and run the program
+run: build
+    ./softmax_test
+
+# Clean up compiled files
+clean:
+    rm -f softmax_test
+
+# Default recipe
+default: run
